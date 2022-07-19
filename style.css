@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --cherry: rgb(235, 79, 97);
+    --off_white: #FCF6F5FF;
+}
+html{
+    margin:    0 auto;
+}
+body{
+    display: flex;
+    min-height: 100vh; 
+}
+/* Left Container */
+#left-container{
+    flex: 1;
+    position: relative;
+    text-align: center;
+    color: var(--off_white);
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+#left-container>div{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 10%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Right Container */
+#right-container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.top-para{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    flex: 0.5;
+    background-color: var(--cherry);
+   
+}
+.top-para >p{
+    width: 450px;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+
+
+/* Form */
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 0.5;
+    padding: 1rem;
+    background-color: var(--off_white);
+    border: 0.5px solid white;
+    border-radius: 20px;
+   
+}
+ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+   
+}
+ul>li+li{
+    margin-right: 10rem;
+}
+legend{
+    align-self: flex-start;
+    font-size: 24px;
+}
+input{
+    width: 170px;
+}
+
+label{
+    display: inline-block;
+    width: 200px;
+    text-align: left;
+}
+
+
+/* Under Form */
+form ~ div{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    flex: 0.5;
+    background-color: var(--cherry);
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+
+
+/* Cool Button */
+button{
+    width: 10rem;
+    height: 2rem;
+    border-radius: 5px;
+    background-color: var(--off_white);
+    outline: none;
+}
