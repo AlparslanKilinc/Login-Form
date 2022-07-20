@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <title>Sign-up Form</title>
+    <script src="script.js" defer></script>
+    <title>Log-in Form</title>
 </head>
 <body>
     <div id="left-container">
@@ -23,37 +25,38 @@
             <p> You know you want to.</p>
         </div>
 
-        <form action="">
+        <form id="f" action="">
                 <legend>Sign-up Form</legend>
                 <div class="group">
                     <div> 
+                        <input type="text" name="fn" id="firstname" required> 
                         <label for="firstname">FIRST NAME</label>
-                        <input type="text" name="fn" id="firstname"> 
                     </div>
                    
                     <div>
                         <label for="lastname">LAST NAME</label>
-                        <input type="text" name="ln" id="lastname">
+                        <input type="text" name="ln" id="lastname" required>
                     </div>
                 </div>
                 <div class="group">
                     <div>
                         <label for="email">EMAIL</label>
-                        <input type="email" name="mail" id="email">
+                        <input type="email" name="mail" id="email"  required>
                     </div>
                     <div>
                         <label for="phonenumber">PHONE NUMBER</label>
-                        <input type="tel" name="phone" id="phonenumber">
+                        <input type="tel" name="phone" id="phonenumber"  pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" 
+                        title="Acceptable Formats: 18005551234 , 1 800 555 1234  ,  +1 800 555-1234">
                     </div>
                 </div>
                 <div class="group">
                     <div>
                         <label for="password">PASSWORD</label>
-                        <input type="password" name="psw" id="password">
+                        <input type="password" name="psw" id="password" minlength="7" maxlength="25" required>
                     </div>
                     <div>
                         <label for="confirmpassword">CONFIRM PASSWORD</label>
-                        <input type="password" name="confirmpsw" id="confirmpassword">
+                        <input type="password" name="confirmpsw" id="confirmpassword" minlength="7" maxlength="25" required>
                     </div>
                  </div>
                 <button  class ="btn-3" type="submit"> <span> Create Account </span> </button>
@@ -63,6 +66,6 @@
             <p> Already have an account ? <a href="http://">Log in</a></p>
         </div>
     </div>
-    
+   
 </body>
 </html>
