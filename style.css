@@ -1,18 +1,37 @@
+/* Define the "system" font family */
+@font-face {
+    font-family: system;
+    font-style: normal;
+    font-weight: 300;
+    src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+  }
+
+  @font-face {
+    font-family: CormorantSC;
+    src: url(/Cormorant_Font/CormorantSC-Regular.ttf);
+  }
+  
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-shadow: red -1px 0, 
+				 cyan 1px 0;
 }
 :root{
     --cherry: rgb(235, 79, 97);
     --off_white: #FCF6F5FF;
+    --font: CormorantSC,system;
+}
+html,body{
+    height: 100%;
 }
 html{
     margin:    0 auto;
+    font-family: var(--font);
 }
 body{
     display: flex;
-    min-height: 100vh; 
 }
 /* Left Container */
 #left-container{
@@ -36,7 +55,7 @@ img{
     transform: translate(-50%,-50%);
     height: 10%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Right Container */
@@ -44,61 +63,52 @@ img{
     display: flex;
     flex-direction: column;
     flex: 1;
+    background-color: var(--off_white);
 }
 
 .top-para{
     display: flex;
     flex-direction: column;
     justify-content: end;
+    font-size: 24px;
     flex: 0.5;
-    background-color: var(--cherry);
-   
+    margin-left: 3rem;
 }
 .top-para >p{
-    width: 450px;
+    width: 480px;
     padding-left: 1rem;
     margin-bottom: 1rem;
 }
 
 
-
-
 /* Form */
-
 form{
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 2rem;
     flex: 0.5;
-    padding: 1rem;
-    background-color: var(--off_white);
-    border: 0.5px solid white;
-    border-radius: 20px;
-   
-}
-ul{
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin-top: 1rem;
-   
-}
-ul>li+li{
-    margin-right: 10rem;
-}
-legend{
-    align-self: flex-start;
-    font-size: 24px;
-}
-input{
-    width: 170px;
+    padding: 3rem;
+    border: 0.5px solid rgba(144, 144, 196, 0.2);
+    border-radius: 10px;
+    box-shadow: 12px 12px 2px 1px rgba(144, 144, 196, 0.2);
 }
 
-label{
-    display: inline-block;
-    width: 200px;
-    text-align: left;
+form >div{
+    display: flex;
+    gap: 3rem;
+   
 }
+.group >div{
+    display: flex;
+    flex-direction: column;
+}
+
+legend{
+    
+    font-size: 24px;
+}
+
+
 
 
 /* Under Form */
@@ -106,20 +116,24 @@ form ~ div{
     display: flex;
     flex-direction: column;
     justify-content: top;
+    margin-left: 3rem;
     flex: 0.5;
-    background-color: var(--cherry);
     gap: 1rem;
+    font-size: 18px;
     padding-top: 1rem;
-    padding-left: 1rem;
 }
 
 
 
-/* Cool Button */
 button{
-    width: 10rem;
+    width: 200px;
     height: 2rem;
     border-radius: 5px;
-    background-color: var(--off_white);
+    background-color: #FCF6F5FF;
+    color: black;
     outline: none;
+    margin-top: 2rem;
 }
+
+
+
