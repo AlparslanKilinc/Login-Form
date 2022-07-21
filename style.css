@@ -22,6 +22,8 @@
     --cherry: rgb(235, 79, 97);
     --off_white: #FCF6F5FF;
     --font: CormorantSC,system;
+    --color-invalid: red;
+    --color-valid:green;
 }
 html,body{
     height: 100%;
@@ -56,7 +58,7 @@ img{
     height: 10%;
     width: 100%;
     font-size: 2rem;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* Right Container */
@@ -96,6 +98,7 @@ form{
 
 form >div{
     display: flex;
+    justify-content: flex-start;
     gap: 3rem;
    
 }
@@ -105,7 +108,6 @@ form >div{
 }
 
 legend{
-    
     font-size: 24px;
 }
 
@@ -144,31 +146,65 @@ button{
     position: absolute;
 }
 
+/* Input */
+
 input{
+    -webkit-appearance: none;
+    appearance: none;
     border: none;
     border-bottom: 2px solid black;
     background-color: transparent;
     padding: 0px 25px 0px 25px;
 }
+
+/* get rid of label if there is input even after focus  */
+input:not(:focus):not(:placeholder-shown)+label{
+    opacity: 0;
+}
+
+/* There is input and it is invalid then show error message (only after out of focus) */
+input[type="email"]:not(:focus):not(:placeholder-shown):invalid ~ .email-error{
+    display: block;
+}
+input[type="tel"]:not(:focus):not(:placeholder-shown):invalid ~ .tel-error{
+    display: block;
+}
+
 input:focus{
     outline: 0;
 }
+/* get rid of label when focused */
 input:focus+label{
     opacity: 0;
 }
 
-input:valid{
+.email-error,.tel-error,#psw-error{
+    display: none;
+    font-weight: bold;
+    color: var(--color-invalid);
+}
+
+
+/* not in focus and there is input and it is valid */
+input:not(input[type="password"]):not(:focus):not(:placeholder-shown):valid{
     background: url(/check.png);
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: 0px -4px;
 }
-input:valid +label{
-    opacity: 0;
+.check{
+    background: url(/check.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 0px -4px;
+}
+#psw-e{
+    display: none;
 }
 
-
-   
+input[type="password"]:focus ~ #psw-e{
+    display: block;
+}
 
 
 

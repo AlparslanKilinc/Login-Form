@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <title>Log-in Form</title>
+    <title>Sign-Up Form</title>
 </head>
 <body>
     <div id="left-container">
@@ -23,40 +23,48 @@
             you realize your deepest dreams.
             Sign-up <span>now</span> to get started</p>
             <p> You know you want to.</p>
+            <p class="check"></p>
         </div>
 
         <form id="f" action="">
                 <legend>Sign-up Form</legend>
                 <div class="group">
                     <div> 
-                        <input type="text" name="fn" id="firstname" required> 
+                        <input type="text" name="fn" id="firstname" placeholder=" " required> 
                         <label for="firstname">FIRST NAME</label>
                     </div>
                    
                     <div>
+                        <input type="text" name="ln" id="lastname"  placeholder=" " required>
                         <label for="lastname">LAST NAME</label>
-                        <input type="text" name="ln" id="lastname" required>
                     </div>
                 </div>
                 <div class="group">
                     <div>
+                        <input type="email" name="mail" id="email" placeholder=" " required>
                         <label for="email">EMAIL</label>
-                        <input type="email" name="mail" id="email"  required>
+                        <p class="email-error">Please Enter a Valid e-mail</p>
                     </div>
                     <div>
+                        <input type="tel" name="phone" id="phonenumber"  pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" placeholder=" ">
                         <label for="phonenumber">PHONE NUMBER</label>
-                        <input type="tel" name="phone" id="phonenumber"  pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" 
-                        title="Acceptable Formats: 18005551234 , 1 800 555 1234  ,  +1 800 555-1234">
+                        <p class="tel-error">Please Enter a Valid Phone Number</p>
                     </div>
                 </div>
                 <div class="group">
                     <div>
+                        <input type="password" name="psw" id="password" onkeyup="checkReq();" placeholder=" "  pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required>
                         <label for="password">PASSWORD</label>
-                        <input type="password" name="psw" id="password" minlength="7" maxlength="25" required>
+                        <div id="psw-e">
+                            <p id="psw-error1"> Must be at least 8 characters </p>
+                            <p id="psw-error2"> Inclusion of UpperCase letter</p>
+                            <p id="psw-error3"> Must include a number</p>
+                        </div>
                     </div>
                     <div>
-                        <label for="confirmpassword">CONFIRM PASSWORD</label>
-                        <input type="password" name="confirmpsw" id="confirmpassword" minlength="7" maxlength="25" required>
+                        <input type="password" name="confirmpsw" id="confirmpsw"  placeholder=" "  onkeyup="check();" required>
+                        <label for="confirmpsw">CONFIRM PASSWORD</label>
+                        <p id="psw-error"> Password Doesn't Match</p>
                     </div>
                  </div>
                 <button  class ="btn-3" type="submit"> <span> Create Account </span> </button>
