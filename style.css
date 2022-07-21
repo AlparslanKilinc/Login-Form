@@ -157,10 +157,11 @@ input:focus+label{
     opacity: 0;
 }
 
-input:focus:valid{
-    background: url(/retro.jpg);
+input:valid{
+    background: url(/check.png);
     background-size: 20px;
     background-repeat: no-repeat;
+    background-position: 0px -4px;
 }
 input:valid +label{
     opacity: 0;
