@@ -17,7 +17,7 @@
     box-sizing: border-box;
 }
 :root{
-    --off_white: #FCF6F5FF;
+    --off_white: rgba(234, 221, 252, 0.856);
     --font: Bungee,system;
 }
 html,body{
@@ -32,10 +32,10 @@ body{
 }
 /* Left Container */
 #left-container{
-    flex: 1;
+    flex: 0.7;
     position: relative;
     text-align: center;
-    color: var(--off_white);
+    color:azure;
 }
 
 img{
@@ -47,13 +47,13 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 40%;
+    top: 13%;
     left: 50%;
     transform: translate(-50%,-50%);
     height: 10%;
     width: 100%;
     font-size: 2rem;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* Right Container */
@@ -80,7 +80,6 @@ img{
    
 }
 
-
 /* Form */
 form{
     display: flex;
@@ -94,6 +93,7 @@ form{
     border-radius: 10px;
     box-shadow: 12px 12px 2px 1px rgba(6, 6, 255, 0.185);
 }
+
 
 form >div{
     display: flex;
@@ -109,8 +109,6 @@ form >div{
 legend{
     font-size: 24px;
 }
-
-
 
 
 /* Under Form */
