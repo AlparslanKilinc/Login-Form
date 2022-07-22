@@ -32,7 +32,7 @@ body{
 }
 /* Left Container */
 #left-container{
-    flex: 0.7;
+    flex: 1;
     position: relative;
     text-align: center;
     color:azure;
@@ -60,7 +60,7 @@ img{
 #right-container{
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: 0.8;
     background-color: var(--off_white);
 }
 
@@ -68,16 +68,15 @@ img{
     display: flex;
     flex-direction: column;
     justify-content: end;
-    font-size: 1.3rem;
+    font-size: 1rem;
     flex: 0.5;
     margin-left: 2rem;
     line-height: 2rem;
 }
 .top-para >p{
-    width: 480px;
+    padding-top: 1rem;
     padding-left: 1rem;
-    margin-bottom: 1rem;
-   
+    padding-bottom: 1rem;
 }
 
 /* Form */
@@ -93,12 +92,15 @@ form{
     border-radius: 10px;
     box-shadow: 12px 12px 2px 1px rgba(6, 6, 255, 0.185);
 }
+label{
+    min-width:200px;
+}
 
 
 form >div{
     display: flex;
     justify-content: flex-start;
-    gap: 3rem;
+    gap: 2rem;
    
 }
 .group >div{
@@ -162,6 +164,7 @@ input{
     border-bottom: 2px solid black;
     background-color: transparent;
     padding: 0px 25px 0px 25px;
+    width: 200px;
 }
 
 /* get rid of label if there is input even after focus  */
@@ -207,7 +210,10 @@ input:not(input[type="password"]):not(:focus):not(:placeholder-shown):valid{
 }
 #psw-e{
     display: none;
-    width: 220px;
+    width: 200px;
+}
+input[type="password"]:empty .check{
+    display: none;
 }
 
 input[type="password"]:focus ~ #psw-e{

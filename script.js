@@ -3,13 +3,16 @@ let check = function(){
     const psw= document.getElementById("password");
     const psw2= document.getElementById("confirmpsw");
     let error = document.getElementById("psw-error")
-   
+
     if(psw.value!=psw2.value){
         error.style.display="block";
     }
     else{
         error.style.display="none";
         psw2.classList.add("check");
+    }
+    if(psw2.value==""){
+        psw2.classList.remove("check");
     }
 
 }
