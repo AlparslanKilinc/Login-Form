@@ -36,7 +36,7 @@ body{
 /* Left Container */
 #left-container{
     display: flex;
-    background: url(./signup.png) no-repeat scroll  center;
+    background: url(/sign_up.png) no-repeat scroll  center;
     background-size: 60%;
     background-position: 50% 75%;
     justify-content: center;
