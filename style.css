@@ -46,6 +46,7 @@ body{
     align-items: top;
     flex: 1;
     background-color: var(--off_white);
+  
 }
 h1{
     margin-top: 5rem;
@@ -64,8 +65,8 @@ img{
     flex: 1;
     background-color: var(--off_white);
     border-left: 3px solid var(--fox-yellow);
-    border-radius: 10px;
     padding-left: 1rem;
+    box-shadow: 5px 5px 2px 1px var(--fox-yellow);
 }
 
 .top-para{
@@ -90,7 +91,7 @@ form{
     border: 2px solid #f4efeb;
     border-radius: 20px;
     margin-right: 2rem;
-    box-shadow: 5px 5px 2px 1px var(--fox-yellow)
+    box-shadow: 5px 5px 2px 1px var(--fox-yellow);
 }
 label{
     min-width:200px;
