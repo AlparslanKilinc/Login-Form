@@ -1,16 +1,14 @@
-/* Define the "system" font family */
+
 @font-face {
     font-family: system;
     font-style: normal;
     font-weight: 300;
     src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
-  }
-
-  @font-face {
+}
+@font-face {
     font-family: Bungee;
     src: url(./Audiowide/Audiowide-Regular.ttf);
-  }
-  
+}
 *{
     margin: 0;
     padding: 0;
@@ -34,7 +32,6 @@ html{
 }
 body{
     display: flex;
-    justify-content: flex-start;
 }
 /* Left Container */
 #left-container{
@@ -46,18 +43,17 @@ body{
     align-items: top;
     flex: 1;
     background-color: var(--off_white);
-  
 }
 h1{
     margin-top: 5rem;
     font-size: 42px;
 }
-
 img{
     margin-top: 2rem;
     max-width: 20%;
     max-height: 20%;
 }
+
 /* Right Container */
 #right-container{
     display: flex;
@@ -68,24 +64,22 @@ img{
     padding-left: 1rem;
     box-shadow: 5px 5px 2px 1px var(--fox-yellow);
 }
-
 .top-para{
     display: flex;
     flex-direction: column;
     justify-content: end;
     font-size: 1rem;
-    flex: 0.5;
+    flex: 0.33;
     margin-left: 2rem;
     margin-bottom: 1rem;
     gap: 1rem;
 }
-
 /* Form */
 form{
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    flex: 0.5;
+    flex: 0.33;
     padding:3rem;
     margin: 0.3rem;
     border: 2px solid #f4efeb;
@@ -96,8 +90,6 @@ form{
 label{
     min-width:200px;
 }
-
-
 form >div{
     display: flex;
     justify-content: flex-start;
@@ -108,19 +100,22 @@ form >div{
     display: flex;
     flex-direction: column;
 }
-
 legend{
     font-size: 24px;
 }
-
-
+.group>div{
+    position: relative;
+}
+.group>div>label{
+    position: absolute;
+}
 /* Under Form */
 form ~ div{
     display: flex;
     flex-direction: column;
     justify-content: top;
     margin-left: 3rem;
-    flex: 0.5;
+    flex: 0.33;
     gap: 1rem;
     font-size: 18px;
     padding-top: 2rem;
@@ -133,7 +128,6 @@ button{
     background-color: #FCF6F5FF;
     color: black;
     outline: none;
-    /* margin-top: 1rem; */
 }
 button:hover{
     background-color:var(--fox-yellow);
@@ -144,17 +138,7 @@ button:active{
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
-
-.group>div{
-    position: relative;
-}
-.group>div>label{
-    position: absolute;
-}
-
 /* Input */
-
 input{
     -webkit-appearance: none;
     appearance: none;
@@ -191,8 +175,6 @@ input:focus+label{
     font-weight: bold;
     color: var(--color-invalid);
 }
-
-
 /* not in focus and there is input and it is valid */
 input:not(input[type="password"]):not(:focus):not(:placeholder-shown):valid{
     background: url(/check.png);
