@@ -29,6 +29,7 @@ html{
 }
 body{
     display: flex;
+    justify-content: flex-start;
 }
 /* Left Container */
 #left-container{
@@ -47,15 +48,11 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 13%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     height: 10%;
     width: 100%;
     font-size: 2rem;
     background-color: rgba(0, 0, 0, 0.2);
 }
-
 /* Right Container */
 #right-container{
     display: flex;
