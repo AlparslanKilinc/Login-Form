@@ -9,10 +9,6 @@
     font-family: Bungee;
     src: url(./Audiowide/Audiowide-Regular.ttf);
 }
-@font-face {
-    font-family: SpaceMono;
-    src: url(./SpaceMono/SpaceMono-Regular.ttf);
-}
 *{
     margin: 0;
     padding: 0;
@@ -23,7 +19,6 @@
     --fox-red: #FF3F02;
     --fox-yellow: #ff7a00;
     --font: Bungee,system;
-    --font2: SpaceMono,system;
 }
 a{
     color: var(--fox-red);
