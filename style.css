@@ -37,7 +37,7 @@ body{
 #left-container{
     display: flex;
     background: url(sign_up.png) no-repeat scroll  center;
-    background-size: 60%;
+    background-size: 50%;
     background-position: 50% 75%;
     justify-content: center;
     align-items: top;
@@ -51,7 +51,6 @@ h1{
 
 img{
     object-fit: cover;
-    margin-top: 2rem;
     width: 200px;
     height: 200px;
 }
@@ -70,8 +69,9 @@ img{
     display: flex;
     flex-direction: column;
     justify-content: end;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     flex: 0.33;
+    margin-top: 1.5rem;
     margin-left: 2rem;
     margin-right: 2rem;
     margin-bottom: 1rem;
