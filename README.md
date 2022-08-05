@@ -1,6 +1,6 @@
-# SignUp-Form
+# SignUp-Page
 
-### SignUp page built using HTML5 Forms.
+### Built Using HTML5 Forms.
 
 * CSS Advanced Selectors
 * Form Styling
