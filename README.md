@@ -6,4 +6,4 @@
 * Form Styling
 * CSS Units,Properites,Positioning,Functions
 
-Live Preview: https://alparslankilinc.github.io/SignUp-Form/
+Live Preview: https://alparslankilinc.github.io/SignUp-Page/
