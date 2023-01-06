@@ -33,6 +33,29 @@ html{
 body{
     display: flex;
 }
+/* Mobile */
+@media screen and (min-width: 320px) {
+    body{
+        flex-direction: column;
+    }
+    #left-container{
+        background: none;
+    }
+    #left-container>img{
+        visibility: hidden;
+    }
+ 
+}
+
+/* Tablet */
+@media screen and (min-width: 680px) {
+
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+
+}
 /* Left Container */
 #left-container{
     display: flex;
