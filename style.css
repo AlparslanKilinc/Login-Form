@@ -207,16 +207,10 @@ input:focus+label{
 }
 /* not in focus and there is input and it is valid */
 input:not(input[type="password"]):not(:focus):not(:placeholder-shown):valid{
-    background: url(/check.png);
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: 0px -4px;
+    color: green;
 }
 .check{
-    background: url(/check.png);
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: 0px -4px;
+    color: green;
 }
 #psw-e{
     display: none;
