@@ -56,7 +56,7 @@ in Original or Modified Versions, may be sold by itself.
 2) Original or Modified Versions of the Font Software may be bundled,
 redistributed and/or sold with any software, provided that each copy
 contains the above copyright notice and this license. These can be
-included either as stand-alone text files, human-readable headers or
+included either as stand-alone text files, human-readable #asides or
 in the appropriate machine-readable metadata fields within text or
 binary files as long as those fields can be easily viewed by the user.
 

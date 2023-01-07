@@ -29,7 +29,6 @@ let checkReq = function(){
     /// Check 1 
         if(password.value.length < 8){
             error1.style.color="red";
-            
         }
         else{
             error1.style.color="green";

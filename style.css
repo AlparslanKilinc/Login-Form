@@ -1,18 +1,11 @@
-
 @font-face {
     font-family: system;
     font-style: normal;
-    font-weight: 300;
     src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
 }
 @font-face {
     font-family: Bungee;
     src: url(./Audiowide/Audiowide-Regular.ttf);
-}
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 :root{
     --off_white: #fffff1;
@@ -25,106 +18,59 @@ a{
 }
 html,body{
     font-family: var(--font);
-    height: 100%;
-}
-html{
-    margin:0 auto;
+    min-height: 100vh;
+    font-size: 16px;
+    background-color: var(--off_white);
 }
 body{
     display: flex;
-}
-/* Mobile */
-@media screen and (min-width: 320px) {
-    body{
-        flex-direction: column;
-    }
-    #left-container{
-        background: none;
-    }
-    #left-container>img{
-        visibility: hidden;
-    }
- 
-}
-
-/* Tablet */
-@media screen and (min-width: 680px) {
-
-}
-
-/* Desktop */
-@media screen and (min-width: 1024px) {
-
+    flex-direction: column;
 }
 /* Left Container */
-#left-container{
+#aside{
     display: flex;
-    background: url(sign_up.png) no-repeat scroll  center;
-    background-size: 50%;
-    background-position: 50% 75%;
-    justify-content: center;
-    align-items: top;
-    flex: 1;
-    background-color: var(--off_white);
+    flex-direction: column;
+    align-items: center;
 }
-h1{
-    margin-top: 5rem;
+.header>h1{
     font-size: 42px;
 }
-
-img{
+.header>img{
     object-fit: cover;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 }
-
+#guy{
+    display: none;
+}
 /* Right Container */
-#right-container{
+#info-box{
     display: flex;
     flex-direction: column;
     flex: 1;
-    background-color: var(--off_white);
-    border-left: 3px solid var(--fox-yellow);
-    padding-left: 1rem;
-    box-shadow: 5px 5px 2px 1px var(--fox-yellow);
-}
-.top-para{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    font-size: 1.1rem;
-    flex: 0.33;
-    margin-top: 1.5rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-bottom: 1rem;
+    padding: 1rem;
     gap: 1rem;
 }
-.top-para>p{
-    text-transform: uppercase;
-    line-height: 1.5rem;
+#info-box>p{
+font-size: 18px;
+align-self: center;
 }
+
 /* Form */
 form{
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    flex: 0.33;
-    padding:3rem;
-    margin: 0.3rem;
+    padding:2rem;
     border: 2px solid #f4efeb;
     border-radius: 20px;
-    margin-right: 2rem;
     box-shadow: 5px 5px 2px 1px var(--fox-yellow);
-}
-label{
-    min-width:200px;
 }
 form >div{
     display: flex;
     justify-content: flex-start;
+    flex-direction: column;
     gap: 2rem;
-   
 }
 .group >div{
     display: flex;
@@ -139,17 +85,7 @@ legend{
 .group>div>label{
     position: absolute;
 }
-/* Under Form */
-form ~ div{
-    display: flex;
-    flex-direction: column;
-    justify-content: top;
-    margin-left: 3rem;
-    flex: 0.33;
-    gap: 1rem;
-    font-size: 16px;
-    padding-top: 2rem;
-}
+
 button{
     font-family: var(--font);
     width: 200px;
@@ -168,30 +104,23 @@ button:active{
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
+
 /* Input */
 input{
     -webkit-appearance: none;
     appearance: none;
     border: none;
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
     background-color: transparent;
-    padding: 0px 25px 0px 25px;
-    width: 200px;
+    font-size: 16px;
+    font-family: var(--font);
 }
-
 /* get rid of label if there is input even after focus  */
 input:not(:focus):not(:placeholder-shown)+label{
     opacity: 0;
 }
-
-/* There is input and it is invalid then show error message (only after out of focus) */
-input[type="email"]:not(:focus):not(:placeholder-shown):invalid ~ .email-error{
-    display: block;
-}
-input[type="tel"]:not(:focus):not(:placeholder-shown):invalid ~ .tel-error{
-    display: block;
-}
-
+/* Get rid of outline around the input  when you focus in */
 input:focus{
     outline: 0;
 }
@@ -199,29 +128,73 @@ input:focus{
 input:focus+label{
     opacity: 0;
 }
-
+/* There is input and it is invalid then show error message (only after out of focus) */
+input[type="email"]:not(:focus):not(:placeholder-shown):invalid ~ .email-error{
+    display: block;
+}
+input[type="tel"]:not(:focus):not(:placeholder-shown):invalid ~ .tel-error{
+    display: block;
+}
+/* Error Messages */
 .email-error,.tel-error,#psw-error{
     display: none;
-    font-weight: bold;
-    color: var(--color-invalid);
+    color: var(--fox-red);
 }
-/* not in focus and there is input and it is valid */
-input:not(input[type="password"]):not(:focus):not(:placeholder-shown):valid{
-    color: green;
-}
-.check{
-    color: green;
-}
+/* Password Checks */
 #psw-e{
     display: none;
-    width: 200px;
 }
+/* Check Mark */
+.check{
+    background: url(/check.svg);
+    background-position: 360px 0px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+
 input[type="password"]:empty .check{
     display: none;
 }
 
 input[type="password"]:focus ~ #psw-e{
     display: block;
+}
+
+
+/* Tablet */
+@media screen and (min-width: 680px) {
+    body{
+        flex-direction: row;
+     }
+     #aside{
+        flex: 1;
+     }
+     .header{
+        display: flex;
+        align-items: center;
+     }
+     #info-box{
+         justify-content: center;
+     }
+     .guy-box{
+        display: flex;
+        align-items: center;
+        flex: 1;
+     }
+     #guy{
+         display: flex;
+         width: 350px;
+         height: 350px;
+     }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+    #guy{
+        display: flex;
+        width: 450px;
+        height: 450px;
+    }
 }
 
 
